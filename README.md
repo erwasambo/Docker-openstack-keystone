@@ -17,11 +17,11 @@ You can use this container in 2 ways.  The first way is to just start up the con
 
 Running with a new sqlite db
 
-    docker run -p 35357:35357 -p 5000:5000 -d garland/docker-openstack-keystone
+    docker run -p 35357:35357 -p 5000:5000 -d erwasambo/docker-openstack-keystone
 
 Running with a mounted persistent sqlite db.  There is an included empty Keystone db in the keystone_db directory you can use to start off with.  The idea here is that the keystone.db file will be outside the container, so when/if the container restarts, it wont restart with the blank db.
 
-    docker run -p 35357:35357 -p 5000:5000 -v <LOCAL_REPO_HOME>/keystone_db:/var/lib/keystone -d garland/docker-openstack-keystone
+    docker run -p 35357:35357 -p 5000:5000 -v <LOCAL_REPO_HOME>/keystone_db:/var/lib/keystone -d erwasambo/docker-openstack-keystone
 
 # boot2docker users
 
@@ -39,7 +39,7 @@ Note for boot2docker users.  Remember that if you are using boot2docker docker i
 
 4. Go back into a command prompt of your local computer and start this container.  The volume path is the path inside your boot2docker VM.
 
-        docker run -p 35357:35357 -p 5000:5000 -v /home/docker/Docker-openstack-keystone/keystone_db:/var/lib/keystone -d garland/docker-openstack-keystone
+        docker run -p 35357:35357 -p 5000:5000 -v /home/docker/Docker-openstack-keystone/keystone_db:/var/lib/keystone -d erwasambo/docker-openstack-keystone
 
 
 # Verify if Keystone is running correctly
