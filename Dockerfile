@@ -1,5 +1,5 @@
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM phusion/baseimage
 
 RUN apt-get update
 RUN apt-get install keystone supervisor -y
