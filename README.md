@@ -49,7 +49,7 @@ After starting this container with either method, you should be able to make cal
 Documentation: http://docs.openstack.org/api/openstack-identity-service/2.0/content/User_Operations_OS-KSADM.html
 
 ## List all users:
-    curl -H "X-Auth-Token:7a04a385b907caca141f" http://<CONTAINER_IP>:35357/v2.0/users
+    curl -H "X-Auth-Token:7a04a385b907caca141f" http://167.88.36.138:35357/v2.0/users
 
 Response:
 
