@@ -49,7 +49,7 @@ After starting this container with either method, you should be able to make cal
 Documentation: http://docs.openstack.org/api/openstack-identity-service/2.0/content/User_Operations_OS-KSADM.html
 
 ## List all users:
-    curl -H "X-Auth-Token:7a04a385b907caca141f" http://167.88.36.138:35357/v2.0/users
+    curl -H "X-Auth-Token:7a04a385b907caca141f" http://104.233.76.91:35357/v2.0/users
 
 Response:
 
@@ -60,7 +60,7 @@ Response:
     -H "X-Auth-Token:7a04a385b907caca141f" \
     -H "Content-type: application/json" \
     -d '{"user":{"name":"Joe","email":"joe@example.com.com","enabled":true,"password":"1234"}}' \
-    http://167.88.36.138:35357/v2.0/users -v
+    http://104.233.76.91:35357/v2.0/users -v
 
 Response:
 
@@ -80,20 +80,20 @@ Response:
     -H "X-Auth-Token:7a04a385b907caca141f" \
     -H "Content-type: application/json" \
     -d '{"passwordCredentials":{"username":"Joe","password":"new_password"}}' \
-    http://167.88.36.138:35357/v2.0/users/<USER_ID>/OS-KSADM
+    http://104.233.76.91:35357/v2.0/users/<USER_ID>/OS-KSADM
 
 ## Delete a user
 
     curl -X DELETE \
     -H "X-Auth-Token:7a04a385b907caca141f" \
     -H "Content-type: application/json" \
-    http://167.88.36.138:35357/v2.0/users/<USER_ID> -v
+    http://104.233.76.91:35357/v2.0/users/<USER_ID> -v
 
 ## Authenticate a user
 
     curl -d '{"auth":{"passwordCredentials":{"username": "Joe", "password": "1234"}}}'  \
     -H "Content-type: application/json" \
-     http://167.88.36.138:35357/v2.0/tokens -v
+     http://104.233.76.91:35357/v2.0/tokens -v
 
 Response:
 
@@ -125,11 +125,11 @@ The "id" is the "< AUTH_TOKEN >"
 
 Return meta data
 
-    curl -H "X-Auth-Token:7a04a385b907caca141f" http://167.88.36.138:35357/v2.0/tokens/<AUTH_TOKEN>
+    curl -H "X-Auth-Token:7a04a385b907caca141f" http://104.233.76.91:35357/v2.0/tokens/<AUTH_TOKEN>
 
 Return no meta data
 
-    curl -I -H "X-Auth-Token:7a04a385b907caca141f" http://167.88.36.138:35357/v2.0/tokens/<AUTH_TOKEN>
+    curl -I -H "X-Auth-Token:7a04a385b907caca141f" http://104.233.76.91:35357/v2.0/tokens/<AUTH_TOKEN>
 
 
     
